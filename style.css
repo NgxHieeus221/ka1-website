@@ -18,7 +18,6 @@ body {
     scrollbar-width: none; 
 }
 
-/* Header */
 .header-container {
     position: relative;
     width: 100%;
@@ -26,11 +25,10 @@ body {
     background: url('images/love_ka1.png') no-repeat center center;
     background-size: cover;
     display: flex;
-    flex-direction: column; /* Sắp xếp theo chiều dọc */
-    justify-content: flex-start; /* Đẩy nội dung lên trên */
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    /* padding-top: 40px; */
     gap: 15px;
 }
 
@@ -53,35 +51,30 @@ body {
     z-index: 2;
 }
 
-/* Menu */
-/* CSS cho thanh điều hướng */
 nav {
-    padding: 15px 0; /* Tạo khoảng cách trên và dưới */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    padding: 15px 0; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
     position: sticky;
     top: 0;
     width: 50%;
     z-index: 1000;
 }
 
-/* CSS cho danh sách menu */
 nav ul {
-    list-style-type: none; /* Loại bỏ dấu chấm */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Căn giữa các mục */
+    justify-content: center;
 }
 
-/* CSS cho từng mục trong menu */
 nav ul li {
-    margin: 0 15px; /* Khoảng cách giữa các mục */
+    margin: 0 15px; 
 }
 
-/* CSS cho liên kết trong menu */
 nav ul li a {
-    text-decoration: none; /* Bỏ gạch chân */
-    color: white; /* Màu chữ trắng */
+    text-decoration: none;
+    color: white; 
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
@@ -89,13 +82,11 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* Hiệu ứng hover */
 nav ul li a:hover {
-    background-color: #367c39; /* Màu tối hơn khi di chuột */
-    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+    background-color: #367c39; 
+    transform: scale(1.05); 
 }
 
-/* Nội dung */
 .banner {
     padding-top: 30px;
     padding-bottom: 15px;
@@ -141,10 +132,13 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Achivement */
+body.campaign-body .header-container {
+    background: url('images/img_happy.png') no-repeat center center;
+    background-size: cover;
+}
 
 body.achievements .header-container {
-    background: url('images/img_achivement.png') no-repeat center center;
+    background: url('images/thanh_tich.png') no-repeat center center;
     background-size: cover;
 }
 
@@ -152,8 +146,8 @@ body.achievements .header-container {
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
-    background: #e3f2fd;  /* Màu nền xanh nhạt */
-    border-left: 5px solid #0077b6;  /* Viền trái nổi bật */
+    background: #e3f2fd; 
+    border-left: 5px solid #0077b6;  
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 1.1rem;
@@ -162,26 +156,23 @@ body.achievements .header-container {
     transition: all 0.3s ease-in-out;
 }
 
-/* Style cho thẻ <a> bên trong */
 .achievement-description a {
     display: block;
-    color: #333;  /* Màu chữ mặc định */
+    color: #333;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
 }
 
-/* Hiệu ứng khi hover */
 .achievement-description:hover {
-    background: #bde0fe;  /* Nền sáng hơn */
+    background: #bde0fe; 
     transform: scale(1.02);
 }
 
 .achievement-description a:hover {
-    color: #0077b6;  /* Đổi màu chữ khi hover */
+    color: #0077b6; 
 }
 
-/* Responsive cho mobile */
 @media (max-width: 768px) {
     .achievement-description {
         padding: 15px;
@@ -268,7 +259,6 @@ body.achievements .header-container {
     color: #333;
 }
 
-/* Responsive: Khi màn hình nhỏ thì tất cả đều dọc (ảnh trên, nội dung dưới) */
 @media (max-width: 768px) {
     .achievement {
         flex-direction: column !important;
@@ -276,7 +266,6 @@ body.achievements .header-container {
     }
 }
 
-/* Footer */
 footer {
     background: #1c1c1c;
     color: white;
@@ -346,7 +335,44 @@ footer {
     transform: scale(1.1);
 }
 
-/* Responsive */
+.social-icons .img-logo {
+    width: 40px;  
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.social-icons .img-logo img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.social-icons .img-logo:hover {
+    background: #39bbe6;
+    transform: scale(1.1);
+}
+
+.achievement-video {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.achievement-video video {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 @media (max-width: 600px) {
     nav ul {
         display: flex;
@@ -358,13 +384,13 @@ footer {
     }
 
     nav ul li {
-        flex-basis: 45%; /* Chia menu thành 2 cột đều nhau */
+        flex-basis: 45%; 
         text-align: center;
-        margin-bottom: 10px; /* Tạo khoảng cách giữa 2 dòng menu */
+        margin-bottom: 10px;
     }
 
     nav ul li a {
-        display: block; /* Đảm bảo các mục menu không bị dính vào nhau */
+        display: block;
         width: 100%; 
         font-size: 1rem;
         padding: 10px;
@@ -387,3 +413,4 @@ footer {
         text-align: center;
     }
 }
+
